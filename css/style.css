@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('./utils.css');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 2;
+}
+
+ul, a{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+}
+
+h1, h2{
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+img{
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.8;
+    padding: 0 3rem;
+    align-items: center;
+    width: 100%;
+    height: 6.5rem;
+    top:0;
+    position: fixed;
+}
+
+.navbar .brand{
+    font-weight: 400;
+}
+
+.navbar h1{
+    font-size: 3rem;
+}
+
+.content h1{
+    font-size: 5.5rem;
+}
+
+.main-header{
+    z-index: 4;
+}
+
+#home .content h1{
+    z-index: 3;
+}
+
+li:hover{
+    border-bottom: .2rem solid var(--warning);
+}
+
+.main-header{
+    background-image: url(../img/bg-1.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+}
+
+.blog{
+    background-image: url('../img/bg-2.jpeg');
+    height: 50vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.blog::before{
+    height: 50vh;
+    content: "";
+    width: 100%;
+    height: 50vh;
+    top:0;
+    left:0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.main-header::before{
+    content: "";
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.main-header *, .blog *{
+    z-index: 4;
+}
+
+.blog .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.content p{
+    font-size: 2.3rem;
+    max-width: 60rem;
+}
+
+.icons{
+    padding: 3rem;
+    text-align: center;
+}
+
+.icons i{
+    background-color: var(--primary);
+    border-radius: 50%;
+    padding: 1.5rem;
+    color:var(--light);
+}
+
+.icons h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+.flex-items{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+}
+
+.flex-items div{
+    padding: 1rem;
+}
+
+.flex-columns img{
+    width: 100%;
+    height: 100%;
+}
+
+.flex-columns .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.flex-columns .column .column-1{
+    height: 100%;
+}
+
+.flex-columns .column{
+    flex:1;
+}
+
+.flex-columns .column .column-2{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+}
+
+.section-padding{
+    padding: 2rem 2rem 4rem;
+}
+
+.section-header{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#gallery .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#gallery .row .column{
+    flex:1;
+}
+
+.card{
+    color:var(--light);
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.teams-card{
+    text-align: center;
+}
+
+.teams-card img{
+    border-radius: 50%;
+}
+
+.contact label{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: .5rem;
+}
+
+.contact input{
+    width: 100%;
+    padding: 1rem;
+    border: 0;
+}
+
+.contact .btn{
+    margin: 2rem 0;
+    padding: .5rem 2.5rem;
+}
+
+.footer{
+    padding: 5rem;
+    text-align: center;
+}
+
+.footer i{
+    margin: 0 1rem;
+}
+
+.footer p{
+    font-size: 1.5rem;
+}
+
+.articles{
+    padding: 5rem;
+}
+
+.articles .column{
+    margin-bottom: 3rem;
+}
+
+.articles .column:nth-child(odd){
+    flex:2;
+}
+
+.articles .column:nth-child(even){
+    flex: 3;
+}
+
+
+
+@media (max-width:768px){
+    .navbar{
+        flex-direction: column;
+        height: 12.5rem;
+    }
+
+    .navbar li{
+        margin: 0 -1rem;
+    }
+
+    .flex-items, .flex-columns .row{
+        flex-direction: column;
+    }
+
+    #gallery .row .column{
+        flex:50%;
+    }
+
+    .teams-card img{
+        width: 70%;
+    }
+
+    .blog .content h1{
+        height: 50%;
+    }
+
+    .articles .column{
+        margin-bottom: 0;
+    }
+
+    .articles .row{
+        margin-bottom: 1rem;
+    }
+}
